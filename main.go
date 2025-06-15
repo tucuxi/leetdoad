@@ -6,10 +6,10 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/jiachengxu/leetdoad/pkg/config"
-	"github.com/jiachengxu/leetdoad/pkg/scraper"
 	"github.com/rs/zerolog"
 	"github.com/rs/zerolog/log"
+	"github.com/tucuxi/leetdoad/pkg/config"
+	"github.com/tucuxi/leetdoad/pkg/scraper"
 )
 
 var (

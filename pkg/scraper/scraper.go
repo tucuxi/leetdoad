@@ -11,8 +11,8 @@ import (
 	"os"
 	"time"
 
-	"github.com/jiachengxu/leetdoad/pkg/config"
-	"github.com/jiachengxu/leetdoad/pkg/leetcode"
+	"github.com/tucuxi/leetdoad/pkg/config"
+	"github.com/tucuxi/leetdoad/pkg/leetcode"
 
 	"github.com/rs/zerolog/log"
 )
