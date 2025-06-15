@@ -1,0 +1,2 @@
+languages: [golang, kotlin, scala, java, postgresql]
+pattern: "{{ .QuestionNumber }}.{{ .QuestionName }}/solution"
