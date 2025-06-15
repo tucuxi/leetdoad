@@ -17,11 +17,13 @@ var languageMap = map[string]string{
 	"golang":     "go",
 	"java":       "java",
 	"javascript": "js",
+	"kotlin":     "kt",
 	"typescript": "ts",
 	"python":     "py",
 	"python3":    "py",
 	"rust":       "rs",
 	"ruby":       "rb",
+	"postgresql": "sql",
 	"scala":      "scala",
 	"swift":      "swift",
 }
@@ -44,7 +46,7 @@ func GetConfig(configFile, cookie string) (*InConfig, error) {
 		return nil, err
 	}
 	if len(c.Languages) == 0 {
-		return nil, fmt.Errorf("languages can not be empty")
+		return nil, fmt.Errorf("languages must not be empty")
 	}
 	availableLanguages := make([]string, len(languageMap))
 	i := 0
