@@ -22,12 +22,6 @@ func (s Submission) WriteTo(fileName string, q Question, includeHeader bool) err
 		return err
 	}
 	defer f.Close()
-	if s.Language == "golang" {
-		_, err = f.WriteString("package main\n")
-		if err != nil {
-			return err
-		}
-	}
 
 	if includeHeader {
 		f.WriteString(fmt.Sprintf(`/*
