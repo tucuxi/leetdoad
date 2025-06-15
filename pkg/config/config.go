@@ -23,7 +23,6 @@ var languageMap = map[string]string{
 	"python3":    "py",
 	"rust":       "rs",
 	"ruby":       "rb",
-	"postgresql": "sql",
 	"scala":      "scala",
 	"swift":      "swift",
 }
