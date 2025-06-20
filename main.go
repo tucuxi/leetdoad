@@ -17,7 +17,7 @@ var (
 	commit    = ""
 	date      = ""
 	goVersion = ""
-	website   = "https://github.com/jiachengxu/leetdoad"
+	website   = "https://github.com/tucuxi/leetdoad"
 )
 
 func printVersion() {
