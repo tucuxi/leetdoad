@@ -45,6 +45,6 @@ changelog:
 
 release:
   github:
-    owner: jiachengxu
+    owner: tucuxi
     name: leetdoad
   prerelease: true
