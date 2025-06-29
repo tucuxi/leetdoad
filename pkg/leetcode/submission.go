@@ -24,14 +24,14 @@ func (s Submission) WriteTo(fileName string, q Question, includeHeader bool) err
 	defer f.Close()
 
 	if includeHeader {
-		f.WriteString(fmt.Sprintf(`/*
+		fmt.Fprintf(f, `/*
 * @lc app=leetcode id=%d lang=%s
 *
 * [%d] %s
 */
 
 // @lc code=start
-`, q.FrontendQuestionID, s.Language, q.FrontendQuestionID, q.QuestionTitleSlug))
+`, q.FrontendQuestionID, s.Language, q.FrontendQuestionID, q.QuestionTitleSlug)
 	}
 
 	_, err = f.WriteString(s.Code)
