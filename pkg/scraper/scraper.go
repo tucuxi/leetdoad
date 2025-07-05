@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"html/template"
-	"io/ioutil"
+	"io"
 	"math/rand"
 	"net/http"
 	"os"
@@ -71,7 +71,7 @@ func (s *scraper) Scrape() error {
 				Str("progress", fmt.Sprintf("[%d/%d]", qNum-lastIdx, qNum)).
 				Int("question id", q.FrontendQuestionID).
 				Str("reason", err.Error()).
-				Msg("failed to scraper submissions, retrying")
+				Msg("failed to scrape submissions, retrying")
 			continue
 		}
 		for _, sub := range submissions {
@@ -115,7 +115,7 @@ func (s *scraper) scrapeSolvedQuestions() ([]leetcode.Question, error) {
 		return nil, err
 	}
 	defer resp.Body.Close()
-	responseBody, err := ioutil.ReadAll(resp.Body)
+	responseBody, err := io.ReadAll(resp.Body)
 	if err != nil {
 		return nil, err
 	}
@@ -139,7 +139,7 @@ func (s *scraper) scrapeLatestAcceptedSubmissionsForQuestion(titleSlug string) (
 		return nil, err
 	}
 	defer resp.Body.Close()
-	b, err := ioutil.ReadAll(resp.Body)
+	b, err := io.ReadAll(resp.Body)
 	if err != nil {
 		return nil, err
 	}

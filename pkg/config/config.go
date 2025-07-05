@@ -37,7 +37,7 @@ func GetConfig(configFile, cookie string) (*InConfig, error) {
 	if cookie == "" {
 		cookie = os.Getenv("LEETCODE_COOKIE")
 		if cookie == "" {
-			return nil, fmt.Errorf("leetcode cookie cannot be empty, you must either pass it from --cookie flag or set LEETCODE_COOKIE env")
+			return nil, fmt.Errorf("leetcode cookie cannot be empty, you must either pass it with the -cookie flag or set LEETCODE_COOKIE env")
 		}
 	}
 	c, err := loadConfig(configFile)
